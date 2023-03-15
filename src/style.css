@@ -4,6 +4,7 @@
   --fs-500: 1.375rem;
   --fs-600: 1.875rem;
   --fs-700: 2rem;
+  --fs-1000: 3rem;
 
   --ff-body: "Kanit", sans-serif;
   --ff-heading: "Noto Sans Thai", sans-serif;
@@ -12,10 +13,10 @@
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: hsl(50, 100%, 93%);
+  --clr-primary-300: hsl(49, 100%, 80%, 1);
+  --clr-primary-400: hsl(45, 97%, 54%, 1);
+  --clr-primary-500: hsl(42, 96%, 50%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -31,6 +32,7 @@
     --fs-500: 1.5rem;
     --fs-600: 2.25rem;
     --fs-700: 3rem;
+    --fs-1000: 4.3rem;
   }
 }
 
@@ -233,8 +235,17 @@ section,
 /* //////////////////////
   Homepage
   /////////////////////// */
-
+.hero,
+.intro {
+  background-color: var(--clr-primary-200);
+}
 .hero > div {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(assets/homepage/main_22.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  background-attachment: fixed;
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
@@ -248,6 +259,19 @@ section,
   object-fit: cover;
 }
 
+.hero__content {
+  color: var(--clr-neutral-100);
+}
+
+.home-title {
+  font-size: var(--fs-1000);
+}
+
+.sub-home-title {
+  font-size: var(--fs-600);
+  font-weight: 400;
+}
+
 @media (min-width: 45em) {
   .hero > div {
     grid-auto-flow: column;
@@ -256,6 +280,7 @@ section,
 
 .featured-articles {
   background-color: var(--clr-primary-200);
+  /* background-color: var(--clr-neutral-100); */
 }
 
 .articles__list {
