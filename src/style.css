@@ -32,7 +32,7 @@
     --fs-500: 1.5rem;
     --fs-600: 2.25rem;
     --fs-700: 3rem;
-    --fs-1000: 4.3rem;
+    --fs-1000: 5rem;
   }
 }
 
@@ -44,7 +44,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  box-sizing: unset;
 }
 
 /* Remove default margin */
@@ -59,6 +60,11 @@ blockquote,
 dl,
 dd {
   margin: 0;
+}
+
+h3 em {
+  font-size: var(--fs-600);
+  font-weight: 400;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -144,6 +150,10 @@ section,
   padding: min(10vh, 10em) 0;
 }
 
+section.hero {
+  padding-top: 0vh;
+}
+
 /* //////////////////////
   Utility Classes
   /////////////////////// */
@@ -196,12 +206,17 @@ section,
   /////////////////////// */
 
 .page-header {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 .page-header__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__content img {
+  width: 70%;
 }
 
 .nav-list {
@@ -268,8 +283,16 @@ section,
 }
 
 .sub-home-title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.hero .container {
+  max-width: 100%;
+  padding-left: 4em;
+  padding-right: 4em;
 }
 
 @media (min-width: 45em) {
