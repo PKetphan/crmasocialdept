@@ -39,18 +39,17 @@ layout: 'base.njk'
     <div class="container flow">
       <h2 class="section-title text-center">ข่าวสาร และ กิจกรรม ของ กมส.ฯ</h2>
       <ul role="list" class="articles__list flow">
-  
-  {%- for post in collections.featured | reverse -%}
-      {% include 'article-snippet.njk' %}
-  {%- endfor -%}
-</ul>
-<h2 class="section-title text-center">กิจกรรมการเรียนรู้ของ นนร.</h2>
-      <ul role="list" class="articles__list flow">
-  
-  {%- for post in collections.featured | reverse -%}
-      {% include 'article-snippet.njk' %}
-  {%- endfor -%}
-</ul>
+        {%- for post in collections.featured | reverse -%}
+            {% include 'article-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
+      <h2 class="section-title text-center">กิจกรรมการเรียนรู้ของ นนร.</h2>
+            <ul role="list" class="articles__list flow">
+        
+        {%- for post in collections.cadets | reverse -%}
+            {% include 'article-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
     </div>
   </section>
 
