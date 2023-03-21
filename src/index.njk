@@ -23,9 +23,7 @@ layout: 'base.njk'
           >
         </div>
       </div>
-      {# <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image" />
-      </div> #}
+      
     </div>
   </section>
   <section class="intro">
@@ -39,17 +37,19 @@ layout: 'base.njk'
   </section>
   <section id="featured-articles" class="featured-articles">
     <div class="container flow">
-      <h2 class="section-title text-center">ข่าวสาร/กิจกรรม</h2>
-      {# <p class="text-center">
-        Here is a sample of articles which I feel give you a good idea of what
-        this site is all about.
-      </p> #}
+      <h2 class="section-title text-center">ข่าวสาร และ กิจกรรม ของ กมส.ฯ</h2>
       <ul role="list" class="articles__list flow">
   
   {%- for post in collections.featured | reverse -%}
       {% include 'article-snippet.njk' %}
   {%- endfor -%}
-
+</ul>
+<h2 class="section-title text-center">กิจกรรมการเรียนรู้ของ นนร.</h2>
+      <ul role="list" class="articles__list flow">
+  
+  {%- for post in collections.featured | reverse -%}
+      {% include 'article-snippet.njk' %}
+  {%- endfor -%}
 </ul>
     </div>
   </section>

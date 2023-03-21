@@ -235,6 +235,16 @@ section.hero {
   text-decoration: underline;
 }
 
+.nav-list ul {
+  visibility: hidden;
+  position: absolute;
+  background: transparent;
+  transition: all 0.5s;
+}
+
+.nav-list li :hover {
+  color: crimson;
+}
 /* //////////////////////
   Footer
   /////////////////////// */
