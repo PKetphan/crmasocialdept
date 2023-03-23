@@ -207,6 +207,7 @@ section.hero {
 
 .page-header {
   padding: 1em 0;
+  background-color: var(--clr-primary-200);
 }
 
 .page-header__content {
@@ -216,17 +217,20 @@ section.hero {
 }
 
 .page-header__content img {
-  width: 70%;
+  width: 90%;
 }
 
 .nav-list {
   margin: 0;
   padding: 0;
+  font-size: var(--fs-400);
 }
 
 .nav-list a {
   color: var(--clr-neutral-900);
   text-decoration: none;
+  transition: color 0.2s;
+  font-size: 110%;
 }
 
 .nav-list a:focus,
@@ -235,16 +239,51 @@ section.hero {
   text-decoration: underline;
 }
 
-.nav-list ul {
-  visibility: hidden;
-  position: absolute;
-  background: transparent;
-  transition: all 0.5s;
+.nav-list li {
+  margin-left: 10px;
+  float: left;
+  position: relative;
 }
 
-.nav-list li :hover {
-  color: crimson;
+.nav-list ul {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  background: var(--clr-primary-200);
+  transition: all 0.5s;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-radius: 2px;
 }
+
+.nav-list li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 5px 0 0 -30px; /* margin top,left align between main nav and sub nav */
+}
+
+.nav-list ul ul {
+  top: -5px; /* bring the margin top back to align 2nd sub nav with 1st sub nav */
+  left: 170px; /* bring 2nd sub nav to the left of 1st sub nav */
+  margin: 0 0 0 20px; /* margin left align between main nav and sub nav */
+}
+
+.nav-list ul li {
+  /* align elements in 1st sub nav */
+  float: none;
+  display: block;
+  border: 0;
+}
+
+.nav-list ul a {
+  /* 1st sub nav */
+  width: 200px;
+  display: block;
+  float: none;
+  padding-bottom: 8px;
+}
+
 /* //////////////////////
   Footer
   /////////////////////// */
