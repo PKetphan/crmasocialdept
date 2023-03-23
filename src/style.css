@@ -162,14 +162,17 @@ section.hero {
    and add margin to the top for proper
    spacing */
 
-.flow > *:where(:not(:first-child)) {
+/* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
+} */
+.flow > * {
+  margin-top: var(--flow-spacer, 0.8em);
 }
 
 .container {
   margin-inline: auto;
   padding-inline: 1.5em;
-  max-width: 72rem;
+  max-width: 75rem;
 }
 
 .container--narrow {
@@ -303,6 +306,11 @@ section.hero {
 .intro {
   background-color: var(--clr-primary-200);
 }
+
+.intro p {
+  font-size: 130%;
+}
+
 .hero > div {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
     url(assets/blog/main_22.jpeg);
@@ -352,12 +360,14 @@ section.hero {
 
 .featured-articles {
   background-color: var(--clr-primary-200);
-  /* background-color: var(--clr-neutral-100); */
 }
 
 .articles__list {
-  --flow-spacer: 3rem;
-  margin: 6rem 0;
+  --flow-spacer: 2.4rem;
+  /* margin: 6rem 0; */
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 70px;
 }
 
 /* //////////////////////
@@ -385,14 +395,13 @@ section.hero {
     "image"
     "title"
     "meta"
-    "body"
     "button";
 }
 
 .snippet__image {
   grid-area: image;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  /* aspect-ratio: 4 / 3; */
   object-fit: cover;
 }
 .snippet__title {
@@ -426,16 +435,20 @@ section.hero {
   color: var(--clr-primary-500);
 }
 
+/* .cadets img {
+} */
+
 @media (min-width: 45em) {
   .snippet {
     grid-template-areas:
-      "title image"
-      "meta image"
-      "body image"
-      "button image";
-    grid-column-gap: 4em;
-    grid-template-columns: 1fr 40%;
+      "image"
+      "title"
+      "meta"
+      "button";
+    grid-column-gap: 0.1em;
+    grid-template-columns: 1fr 15%;
     grid-template-rows: min-content min-content min-content 1fr;
+    grid-template-rows: 200px 150px min-content 1fr;
   }
 }
 
@@ -478,4 +491,10 @@ section.hero {
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .articles__list {
+    flex-wrap: wrap;
+  }
 }
