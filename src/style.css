@@ -152,6 +152,8 @@ section,
 
 section.hero {
   padding-top: 0vh;
+  padding-bottom: 0px;
+  margin-bottom: -60px;
 }
 
 /* //////////////////////
@@ -194,10 +196,25 @@ section.hero {
 .article-title,
 .section-title {
   color: var(--clr-primary-500);
+  margin-top: 0px;
 }
 
 .article-title {
   font-size: var(--fs-700);
+  padding-bottom: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgb(0, 0, 0, 0.5)),
+    url(assets/blog/main_22.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  background-attachment: fixed;
+  display: grid;
+  grid-auto-flow: row;
+  align-items: end;
+  margin-top: -320px;
+  margin-left: -120px;
+  margin-right: -120px;
+  padding-left: 100px;
 }
 
 .section-title {
@@ -210,7 +227,8 @@ section.hero {
 
 .page-header {
   padding: 1em 0;
-  background-color: var(--clr-primary-200);
+  background-color: hsla(0, 0%, 10%, 1);
+  height: 35vh;
 }
 
 .page-header__content {
@@ -230,7 +248,8 @@ section.hero {
 }
 
 .nav-list a {
-  color: var(--clr-neutral-900);
+  /* color: var(--clr-neutral-900); */
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s;
   font-size: 110%;
@@ -253,7 +272,7 @@ section.hero {
   visibility: hidden;
   z-index: 1;
   position: absolute;
-  background: var(--clr-primary-200);
+  /* background: var(--clr-primary-200); */
   transition: all 0.5s;
   padding-left: 20px;
   padding-bottom: 10px;
@@ -312,17 +331,19 @@ section.hero {
 }
 
 .hero > div {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgb(0, 0, 0, 0.5)),
     url(assets/blog/main_22.jpeg);
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 110vh;
   background-attachment: fixed;
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
   align-items: center;
   gap: 3em;
+  margin-top: -320px; /* to cover the bg image all the way to the top */
+  margin-bottom: -120px;
 }
 
 .hero__image {
@@ -376,6 +397,7 @@ section.hero {
 
 .main-article {
   margin-bottom: 3rem;
+  background-color: var(--clr-primary-200);
 }
 
 .main-article__figure figcaption {
