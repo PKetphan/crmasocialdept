@@ -6,7 +6,7 @@ layout: 'base.njk'
 
 <div class="container flow">
 <h1 class="article-title">ข่าวสารทั้งหมด</h1>
-<ul role="list" class="articles__list flow">
+<ul role="list" class="articles__list flow all_articles">
   
   {%- for post in collections.post | reverse -%}
       {% include 'article-snippet.njk' %}
