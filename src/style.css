@@ -550,8 +550,25 @@ section.hero {
   background-color: var(--clr-neutral-900);
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+.btn.btn_all {
+  margin-bottom: 50px;
+  text-align: center;
+  display: block;
+  margin: -20px auto 100px auto;
+  width: 150px;
+  font-size: 130%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   .articles__list {
     flex-wrap: wrap;
+  }
+  .all_articles .snippet img {
+    max-width: 320px;
+    max-height: 240px;
+  }
+
+  .featured-articles {
+    margin-left: 0px;
   }
 }
