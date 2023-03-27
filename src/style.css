@@ -381,7 +381,7 @@ section.hero {
 
 .featured-articles {
   background-color: var(--clr-primary-200);
-  margin-left: -100px;
+  /* margin-left: -100px; */
 }
 
 .articles__list {
