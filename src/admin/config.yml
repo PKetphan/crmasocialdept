@@ -19,14 +19,9 @@ collections:
           label: "Featured Image",
           name: "image",
           widget: "image",
-          allow_multiple: true,
+          media_library:
+          config:
+            allow_multiple: true,
         }
       # - { label: "Image caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - {
-          label: "Gallery",
-          name: "galleryImages",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field: { label: Image, name: image, widget: image },
-        }
