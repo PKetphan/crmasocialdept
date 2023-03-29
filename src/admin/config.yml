@@ -21,8 +21,8 @@ collections:
           widget: "image",
           multiple: true,
           media_library:
-          config:
-            allow_multiple: true,
+            config:
+              allow_multiple: true,
         }
       # - { label: "Image caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
