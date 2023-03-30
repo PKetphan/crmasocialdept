@@ -572,3 +572,36 @@ section.hero {
     margin-left: 0px;
   }
 }
+
+/* ABOUT PAGE */
+
+.about_text {
+  margin-top: 50px;
+  font-size: 120%;
+  text-align: justify;
+}
+ion-icon {
+  color: var(--clr-primary-400);
+  font-size: 70px;
+  padding-bottom: 1rem;
+}
+
+.column2 {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+}
+
+.column5 {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  text-align: left;
+}
+
+.column5 img {
+  width: 40%;
+  padding-bottom: 30px;
+}
