@@ -573,6 +573,16 @@ section.hero {
   }
 }
 
+.banner {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.banner h2 {
+  line-height: 1.8;
+  color: var(--clr-primary-500);
+}
+
 /* ABOUT PAGE */
 
 .about_text {
@@ -593,6 +603,17 @@ ion-icon {
   column-gap: 50px;
 }
 
+.column2.objectives {
+  grid-template-columns: 20% 1fr;
+}
+
+.column2.objectives ul {
+  margin-top: -20px;
+}
+.column2.objectives li {
+  display: block;
+  text-decoration: none;
+}
 .column5 {
   padding-top: 3rem;
   display: grid;
@@ -626,18 +647,67 @@ ion-icon {
   line-height: 2.3;
 }
 
-.branch-title {
-  margin-top: 50px;
-  text-align: center;
-}
-
 /* DIRECTOR ARCHIVES  */
 .director-archives-table {
   display: flex;
   justify-content: center;
   font-size: 130%;
+  padding-bottom: 50px;
 }
 th,
 td {
   padding: 15px;
+}
+
+/* PROGRAM */
+
+.clicktodownload {
+  color: var(--clr-neutral-500);
+}
+
+.program-list:after {
+  display: block;
+  height: 2px;
+  background-color: var(--clr-primary-400);
+  content: " ";
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.program-list li {
+  font-size: 120%;
+  display: block;
+  line-height: 1.8;
+}
+
+.program-list a {
+  color: var(--clr-neutral-400);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 110%;
+}
+
+.program-list a:focus,
+.program-list a:hover {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+}
+
+.caution {
+  color: crimson;
+}
+
+.objectives,
+.management {
+  font-weight: 300;
+}
+
+.management {
+  padding-bottom: 50px;
+}
+
+.showcase {
+  background-color: bisque;
+  margin-bottom: 100px;
 }
