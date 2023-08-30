@@ -433,6 +433,10 @@ section.hero {
   border: 5px solid var(--clr-primary-400);
 }
 
+.main-article img:not(:nth-of-type(1)) {
+  width: 200px;
+}
+
 .main-article__figure figcaption {
   margin: 1rem 0;
   font-size: var(--fs-300);
