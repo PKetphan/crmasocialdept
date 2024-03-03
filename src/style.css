@@ -607,9 +607,9 @@ ion-icon {
   column-gap: 50px;
 }
 
-.column2.objectives {
+/* .column2.objectives {
   grid-template-columns: 20% 1fr;
-}
+} */
 
 .column2.objectives ul {
   margin-top: -20px;
@@ -617,6 +617,11 @@ ion-icon {
 .column2.objectives li {
   display: block;
   text-decoration: none;
+}
+
+.column2.objectives img {
+  height: 50%;
+  object-fit: cover;
 }
 .column5 {
   padding-top: 3rem;
@@ -700,6 +705,11 @@ td {
 
 .caution {
   color: crimson;
+}
+
+.objectives {
+  background-image: url(/assets/navbar/program/46.jpg);
+  opacity: 0.5;
 }
 
 .objectives,
