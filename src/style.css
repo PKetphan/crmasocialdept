@@ -707,11 +707,6 @@ td {
   color: crimson;
 }
 
-.objectives {
-  background-image: url(/assets/navbar/program/46.jpg);
-  opacity: 0.5;
-}
-
 .objectives,
 .management {
   font-weight: 300;
