@@ -707,6 +707,10 @@ td {
   color: crimson;
 }
 
+objectives {
+  margin-top: 50px;
+}
+
 .objectives,
 .management {
   font-weight: 300;
